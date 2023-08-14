@@ -8,20 +8,18 @@
 void reverse_listint(listint_t **head)
 {
 	listint_t *prev = NULL;
-	listint_t *curr = *head;
+	listint_t *current = *head;
 	listint_t *next = NULL;
 
-	while (curr)
+	while (current)
 	{
-		next = curr->next;
-		curr->next = prev;
-		prev = curr;
-		curr = next;
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
 	}
-
 	*head = prev;
 }
-
 /**
  * is_palindrome - checks if a linked list is a palindrome
  * @head: head
@@ -68,6 +66,5 @@ int is_palindrome(listint_t **head)
 
 	if (!dup)
 		return (1);
-
 	return (0);
 }
