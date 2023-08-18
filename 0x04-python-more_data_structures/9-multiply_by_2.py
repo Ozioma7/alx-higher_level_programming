@@ -2,4 +2,10 @@
 
 
 def multiply_by_2(a_dictionary):
-    return {key: val*2 for key, val in a_dictionary.items()}
+    new_folder = a_dictionary.copy()
+    list_keys = list(new_folder.keys())
+
+    for i in list_keys:
+        new_folder[i] *= 2
+
+    return (new_folder)
