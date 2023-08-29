@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Define a class square"""
 
 
 class Square:
+    """Representing a square"""
     def __init__(self, size):
         """Initialization
         Args:
@@ -11,10 +13,12 @@ class Square:
 
         @property
         def size(self):
+            """Getting a setting the size of the square"""
             return (self.__size)
 
         @size.setter
         def size(self, value):
+            """Getting a setting the size of the square"""
             if type(value) is not int:
                 raise TypeError('size must be an integer')
             elif value < 0:
