@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-"""Defining a Rectanle"""
+"""Defining a Rectangle class."""
 
 
 class Rectangle:
-    """Representing a Rectangle"""
+    """Representing a rectangle"""
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Initialization"""
+        """Initialization """
         type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Getting/Setting the width of a Rectangle"""
+        """Getting/setting the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -29,7 +29,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getting/Setting the height of a Rectangle"""
+        """Getting/setting the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -41,7 +41,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Area of the Rectangle."""
+        """Return the area of the Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
@@ -52,13 +52,13 @@ class Rectangle:
 
     def __str__(self):
         """Return the printable representation of the Rectangle
-        with the # character."""
-        if self.__width == 1 or self.__height == 0:
+        with the # character"""
+        if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
@@ -70,6 +70,6 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """Print deletion message of a Rectangle."""
+        """Prints deletion message of a Rectangle."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
