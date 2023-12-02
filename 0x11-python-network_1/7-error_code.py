@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""Python script that sends a request to the URL and
-displays the body of the response if there are no error and the error code when there is an HTTP error."""
+"""
+Python script that sends a request to the URL and
+displays the body of the response if there are no error
+and the error code when there is an HTTP error.
+"""
 import requests
 import sys
 
